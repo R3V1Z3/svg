@@ -9,17 +9,16 @@
     vertical-align: baseline;
     background: transparent;
     font-family: 'Special Elite';
-    color: #888;
+    color: #333;
 }
 
 html {
-    background: #111;
+    background: #ccc;
 }
 
 body {
-    background: #000;
+    background: #ccc;
     height: auto;
-    background: rgb(94, 94, 94);
 }
 
 h1,
@@ -28,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #ccc;
+    color: #333;
     font-size: 30px;
     font-family: 'Special Elite';
 }
@@ -36,16 +35,16 @@ h6 {
 a {
     display: inline-block;
     color: #a00;
-    font-weight: bold;
     text-decoration: none;
 }
 
 a:hover {
-    text-shadow: 0px 0px 18px rgba(255, 0, 0, 1);
+    text-decoration: underline;
 }
 
 #wrapper {
-    background: #000;
+    background: #ddd;
+    padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -58,6 +57,6 @@ a:hover {
     right: 0;
     margin: auto;
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
