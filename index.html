@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Eerie CSS</title>
+    <title>SVG Filters and Effects</title>
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,7 +17,22 @@
     <div id="wrapper">
         <div id="message">
             <h1>SVG Filters and Effects</h1>
-            <p>This small repo mainly holds and helps to reference filter effects from <a href="https://inkscape.org/en/">Inkscape</a>.</p><br>
+            <p>This small repo mainly holds and helps to reference filter effects from <a href="https://inkscape.org/en/">Inkscape</a>.</p>
+            <p>Try the various filters below.</p>
+            <div id="effects">
+                <div id="before">
+                    <div class="shape shape1">A</div>
+                    <div class="shape shape2">B</div>
+                    <div class="shape shape3">C</div>
+                </div>
+                <div id="after">
+                    <div class="shape shape1">A</div>
+                    <div class="shape shape2">B</div>
+                    <div class="shape shape3">C</div>
+                </div>
+            </div>
+            <p>Filter name: <span id="filter-name"></span></p>
+            <p><pre id="filter-code">filter: url('../filters.svg#f065');</pre></p><br/>
             <p>Read more at <a href="https://github.com/Ugotsta/svg/">GitHub</a>.</p>
         </div>
     </div>

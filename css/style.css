@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Special+Elite';
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans|PT+Serif');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
     font-size: 105%;
     vertical-align: baseline;
     background: transparent;
-    font-family: 'Special Elite';
+    font-family: 'PT Serif', serif;
     color: #333;
 }
 
@@ -29,7 +29,12 @@ h5,
 h6 {
     color: #333;
     font-size: 30px;
-    font-family: 'Special Elite';
+    margin-bottom: 15px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 a {
@@ -42,14 +47,71 @@ a:hover {
     text-decoration: underline;
 }
 
+#effects {
+    height: 204px;
+    width: 404px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#effects #before,
+#effects #after {
+    display: block;
+    float: left;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+#effects #after {
+    filter: url('../filters.svg#f065');
+}
+
+#effects .shape {
+    position: relative;
+    font-size: 7em;
+    text-align: left;
+    display: inline;
+    font-family: 'PT Mono', monospace;
+    font-weight: bold;
+}
+
+#effects .shape1 {
+    left: 0px;
+    top: 0px;
+    color: red;
+}
+
+#effects .shape2 {
+    left: -50px;
+    top: 15px;
+    color: green;
+}
+
+#effects .shape3 {
+    left: 40px;
+    top: -140px;
+    color: blue;
+}
+
+#filter-code {
+    background: rgba(255,255,255,0.5);
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+    font-family: 'PT Mono', monospace;
+    color: #777;
+}
+
 #wrapper {
     background: #ddd;
     padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 400px;
-    height: 200px;
+    width: 800px;
+    height: 500px;
     position: absolute;
     top: 0;
     bottom: 0;
