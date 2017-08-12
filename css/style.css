@@ -54,8 +54,8 @@ a:hover {
     margin-bottom: 20px;
 }
 
-#effects #before,
-#effects #after {
+#before,
+#after {
     display: block;
     float: left;
     height: 200px;
@@ -64,7 +64,7 @@ a:hover {
     background: #fff;
 }
 
-#effects #after {
+#after {
     filter: url('../filters.svg#f065');
 }
 
