@@ -49,15 +49,6 @@ a:hover {
     border: 1px solid #000;
 }
 
-#filter-code {
-    background: rgba(255,255,255,0.5);
-    width: 60%;
-    padding: 10px;
-    margin: auto;
-    font-family: 'PT Mono', monospace;
-    color: #777;
-}
-
 #content {
     padding: 20px;
     display: flex;
@@ -121,4 +112,43 @@ a:hover {
 
 svg {
     display: none;
+}
+
+.preview-form .preview-input,
+.preview-form input.preview-input {
+    border-radius: 2em;
+    padding: .5em 1em;
+}
+
+.preview-form input,
+.preview-form select,
+.preview-form textarea {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.75);
+}
+
+button.preview-button {
+    background: rgba(0,0,0,0.75);
+    border-radius: 20px;
+    padding: 6px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#filter-code {
+    background: rgba(255,255,255,0.75);
+    padding: 10px;
+    font-family: 'PT Mono', monospace;
+}
+
+#filter-name {
+    padding: 10px 0 0 0;
+    color: #ccc;
+    display: block;
 }

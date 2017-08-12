@@ -21,14 +21,20 @@
     <div id="wrapper">
         <div id="content">
             <h1>SVG Filters and Effects</h1>
-            <p>This small repo mainly holds and helps to reference filter effects from <a href="https://inkscape.org/en/">Inkscape</a>.</p>
-            <p>Try the various filters below.</p>
-            <iframe id="effects" width="600" height="300" src="//www.wikipedia.org/" frameborder="0" allowfullscreen>
+            <p>This small repo mainly holds and helps to reference filter effects from <a href="https://www.wikipedia.org">Inkscape</a>.</p>
+            <p>Try the various filters on urls below.</p>
+            
+            <form class="preview-form">
+                <input type="text" id="url" class="preview-input" value="https://www.wikipedia.org"/>
+                <button type="submit" class="preview-button" onclick="window.open(window.location.href + '?url=' + document.getElementById('url').value);">Go</button>
+            </form>
+            
+            <iframe id="effects" width="600" height="400" src="//www.wikipedia.org/" frameborder="0" allowfullscreen>
             </iframe>
-            <p>Filter name: <span id="filter-name"></span></p>
-            <p><pre id="filter-code">filter: url('../filters.svg#f065');</pre></p><br/>
+            
             <p>Read more at <a href="https://github.com/Ugotsta/svg/">GitHub</a>.</p>
         </div>
+        
         <div id="sidebar">
             <a href="https://github.com/Ugotsta/svg"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
             <h2>SVG Filters and Effects</h2>
@@ -37,6 +43,8 @@
             </p>
             <div id="filter-list">
             </div>
+            <span id="filter-name">Filter:</span>
+            <p><pre id="filter-code">filter: url('../filters.svg#f065');</pre></p><br/>
         </div>
     </div>
 </body>

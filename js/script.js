@@ -8,10 +8,13 @@ function getURLParameter(name) {
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [, ""])[1].replace(/\+/g, '%20')) || null;
 }
 // allow user to override fontsize
-var fontsize = getURLParameter('fontsize');
-if (!fontsize) fontsize = 110;
+var url = getURLParameter('url');
+if (!url) url = 'https://www.wikipedia.org';
 
 jQuery(document).ready(function() {
+    
+    // set iframe url
+    $('#effects').attr( 'src', url );
     
     var filename = 'filters.svg';
     load_svg( filename );
@@ -30,7 +33,6 @@ jQuery(document).ready(function() {
         
         var content = '<ul>';
         $('#svg defs filter').each(function() {
-            //content += $(this).text();
             var id = $(this).attr('id');
             var name = $(this).attr('inkscape:label');
             var description = $(this).attr('inkscape:menu-tooltip');
@@ -46,11 +48,14 @@ jQuery(document).ready(function() {
         $('#filter-list').on('click', 'li', function () {
             $('#filter-list .selected').removeClass( 'selected' );
             $(this).addClass( 'selected' );
-            $('#filter-name').text( $(this).text() );
             var id = $(this).data('id');
             var filter_url = 'url("' + svg_base + '#' + id + '")';
-            $('#filter-code').text( 'filter: ' + filter_url + ';' );
+            // add selected filter to effect iframe
             $('#effects').css( 'filter', filter_url );
+            
+            // write CSS code for selected filter
+            $('#filter-code').text( 'filter: ' + filter_url + ';' );
+            $('#filter-name').text( 'Filter: ' + $(this).text() );
         });
 
         $('#filter-list ul li:nth-child(4)').trigger( "click" );
