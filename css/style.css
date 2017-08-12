@@ -5,32 +5,25 @@
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 105%;
+    font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    font-family: 'PT Serif', serif;
+    font-family: 'PT Sans', sans-serif;
     color: #333;
 }
 
 html {
-    background: #ccc;
+    background: #ddd;
 }
 
 body {
-    background: #ccc;
     height: auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #333;
+h1, h2, h3, h4, h5, h6 {
     font-size: 30px;
     margin-bottom: 15px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Serif', serif;
 }
 
 p {
@@ -48,51 +41,12 @@ a:hover {
 }
 
 #effects {
-    height: 204px;
-    width: 404px;
+    height: 400px;
+    width: 600px;
     margin: auto;
     margin-bottom: 20px;
-}
-
-#before,
-#after {
-    display: block;
-    float: left;
-    height: 200px;
-    width: 200px;
+    background: white;
     border: 1px solid #000;
-    background: #fff;
-}
-
-#after {
-    filter: url('../filters.svg#f065');
-}
-
-#effects .shape {
-    position: relative;
-    font-size: 7em;
-    text-align: left;
-    display: inline;
-    font-family: 'PT Mono', monospace;
-    font-weight: bold;
-}
-
-#effects .shape1 {
-    left: 0px;
-    top: 0px;
-    color: red;
-}
-
-#effects .shape2 {
-    left: -50px;
-    top: 15px;
-    color: green;
-}
-
-#effects .shape3 {
-    left: 40px;
-    top: -140px;
-    color: blue;
 }
 
 #filter-code {
@@ -104,14 +58,13 @@ a:hover {
     color: #777;
 }
 
-#wrapper {
-    background: #ddd;
+#content {
     padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 800px;
-    height: 500px;
+    width: 70%;
+    height: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -119,6 +72,53 @@ a:hover {
     right: 0;
     margin: auto;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    color: #eee;
+    padding: 20px;
+    padding-top: 40px;
+    font-size: 0.8em;
+}
+
+#sidebar h2,
+#sidebar p {
+    color: #ddd;
+}
+
+#filter-list {
+    padding: 6px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    overflow-y: scroll;
+}
+
+#filter-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#filter-list ul li {
+    cursor: pointer;
+    color: #aaa;
+}
+
+#filter-list ul li:hover {
+    color: #fff;
+}
+
+#filter-list ul li.selected {
+    color: yellow;
+}
+
+svg {
+    display: none;
 }

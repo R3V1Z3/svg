@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>SVG Filters and Effects</title>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,25 +19,24 @@
 
 <body>
     <div id="wrapper">
-        <div id="message">
+        <div id="content">
             <h1>SVG Filters and Effects</h1>
             <p>This small repo mainly holds and helps to reference filter effects from <a href="https://inkscape.org/en/">Inkscape</a>.</p>
             <p>Try the various filters below.</p>
-            <div id="effects">
-                <div id="before">
-                    <div class="shape shape1">A</div>
-                    <div class="shape shape2">B</div>
-                    <div class="shape shape3">C</div>
-                </div>
-                <div id="after">
-                    <div class="shape shape1">A</div>
-                    <div class="shape shape2">B</div>
-                    <div class="shape shape3">C</div>
-                </div>
-            </div>
+            <iframe id="effects" width="600" height="300" src="//www.wikipedia.org/" frameborder="0" allowfullscreen>
+            </iframe>
             <p>Filter name: <span id="filter-name"></span></p>
             <p><pre id="filter-code">filter: url('../filters.svg#f065');</pre></p><br/>
             <p>Read more at <a href="https://github.com/Ugotsta/svg/">GitHub</a>.</p>
+        </div>
+        <div id="sidebar">
+            <a href="https://github.com/Ugotsta/svg"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+            <h2>SVG Filters and Effects</h2>
+            <p>
+                Click a filter to preview it in content section.
+            </p>
+            <div id="filter-list">
+            </div>
         </div>
     </div>
 </body>
